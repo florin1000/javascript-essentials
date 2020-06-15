@@ -59,10 +59,31 @@ output
 John
 ReferenceError: name is not defined;
 
-You can't access your variable all over your application, only inside their scope hence name2 variable is only available inside the function it was declared
+You can't access your variable all over your application, only inside their scope hence name2 
+
+variable is only available inside the function it was declared
 */
 
 ```
+#### Block Scope
+block = one or more statements delimited by a group of curly braces
+block scope variable = that variable it exists only inside the block it has been declared;
+
+```
+{
+    var name_22 = 'Max';
+}
+    console.log(name_22);
+
+    /*
+    Max
+
+    so var is not blocked scoped, you can access a variable outside the block is is defined;
+    */
+
+
+```
+
 
 ### 3.Hoisting
 Is the process of initialization at creation of variables with value of _undefined_, default value.
@@ -72,5 +93,5 @@ The process of a variable gets declaration moves the variable of the top of thei
 console.log(name_3) //undefined;
 var name_3 = "Jane" ;
 
-trying to access a variable before it's assignation will result in _undefined_ since the declaration is moved at the top of their scope and initialized with the default value, but not the assignation.
+trying to access a variable before it's assignation will result in _undefined_ since the declaration  is moved at the top of their scope and initialized with the default value, but not the assignation.
 ```
