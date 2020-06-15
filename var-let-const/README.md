@@ -66,10 +66,11 @@ You can't access your variable all over your application, only inside their scop
 
 ### 3.Hoisting
 Is the process of initialization at creation of variables with value of _undefined_, default value.
+The process of a variable gets declaration moves the variable of the top of their scope and assign them the _undefiend_ value;
 
 ```
 console.log(name_3) //undefined;
 var name_3 = "Jane" ;
 
-
+trying to access a variable before it's assignation will result in _undefined_ since the declaration is moved at the top of their scope and initialized with the default value, but not the assignation.
 ```
