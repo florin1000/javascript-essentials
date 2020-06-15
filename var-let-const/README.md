@@ -86,8 +86,7 @@ block scope variable = that variable it exists only inside the block it has been
 
 
 ### 3.Hoisting
-Is the process of initialization at creation of variables with value of _undefined_, default value.
-The process of a variable gets declaration moves the variable of the top of their scope and assign them the _undefiend_ value;
+Is the process of initialization at creation of variables with value of _undefined_, default value and moving the variable at the top of their scope.
 
 ```
 console.log(name_3) //undefined;
