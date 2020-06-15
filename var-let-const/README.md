@@ -95,3 +95,135 @@ var name_3 = "Jane" ;
 
 trying to access a variable before it's assignation will result in _undefined_ since the declaration  is moved at the top of their scope and initialized with the default value, but not the assignation.
 ```
+
+### Var vs Let vs Const
+
+
+| Identifier    | Scope         | Update* |Redeclare**  |Hoisting***   |    
+| ------------- |:-------------:| ------: |-----------: |-------------:| 
+| VAR           | Function scope|   ✓     |    ✓       |   undefined  |  
+| LET           | Block scope   |   ✓     | SyntaxError |ReferenceError| 
+| CONST         | Block scope   |TypeError | SyntaxError|ReferenceError|
+
+
+#### SCOPE
+_Let_ / _Const_ are block scoped unlike _var_ so a variable declared with _Let_/_Const_ it can be accessed only inside that block
+
+```
+{
+    let name_22 = 'Max';
+}
+    console.log(name_22);
+
+    /*
+    Reference Error, name_22 is not defined
+
+    so let is blocked scoped, you can't access a variable outside the block is is defined;
+    */
+
+```
+
+#### UPDATE
+*var*
+
+ ```
+ var a = "first_letter";
+ console.log(a);
+ a = "second_letter";
+ console.log(a);
+ ////
+ first_letter
+ second_letter
+```
+
+*let*
+
+```
+ let b = "first_letter";
+ console.log(b);
+ b = "second_letter";
+ console.log(b);
+ ////
+ first_letter
+ second_letter
+ ```
+
+ *const*
+
+```
+ const c = "first_letter";
+ console.log(c);
+ c = "second_letter";
+ console.log(c);
+ ////
+ first_letter
+ TypeError: Assignment to constant variable.
+ ```
+
+
+#### Redeclare
+*var*
+
+ ```
+ var a = "first_letter";
+ console.log(a);
+ var a = "second_letter";
+ console.log(a);
+ ////
+ first_letter
+ second_letter
+```
+
+*let*
+
+```
+ let b = "first_letter";
+ console.log(b);
+ let b = "second_letter";
+ console.log(b);
+ ////
+ first_letter
+ SyntaxError: Identifier 'b' has already been declared
+ ```
+
+ *const*
+
+```
+ const c = "first_letter";
+ console.log(c);
+ const c = "second_letter";
+ console.log(c);
+ ////
+ first_letter
+ SyntaxError: Identifier 'c' has already been declared
+ ```
+
+ #### Hoisting
+*var*
+
+ ```
+ console.log(a);
+ var a = "first_letter";
+ 
+ ////
+ undefined
+```
+
+*let*
+
+```
+ console.log(b);
+ let b = "first_letter";
+ ////
+ ReferenceError: Cannot access 'b' before initialization
+  ```
+
+ *const*
+
+```
+ console.log(c);
+ const c = "first_letter";
+ 
+ ////
+ ReferenceError: Cannot access 'c' before initialization
+ ```
