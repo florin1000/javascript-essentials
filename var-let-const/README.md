@@ -66,7 +66,7 @@ variable is only available inside the function it was declared
 
 ```
 #### Block Scope
-block = one or more statements delimited by a group of curly braces
+block = one or more statements delimited by a group of curly braces   
 block scope variable = that variable it exists only inside the block it has been declared;
 
 ```
