@@ -118,7 +118,7 @@ _Let_ / _Const_ are block scoped unlike _var_ so a variable declared with _Let_/
     /*
     Reference Error, name_22 is not defined
 
-    so let is blocked scoped, you can't access a variable outside the block is is defined;
+    so let is blocked scoped, you can't access a variable outside the block is defined;
     */
 
 ```
@@ -160,6 +160,23 @@ _Let_ / _Const_ are block scoped unlike _var_ so a variable declared with _Let_/
  TypeError: Assignment to constant variable.
  ```
 
+But you can update a property of a constant
+
+```
+const user = {
+    name: 'John',
+    age: '99'
+}
+console.log(user.age)
+
+user.age=100;
+console.log(user.age);
+
+////
+99
+100
+
+```
 
 #### Redeclare
 *var*
