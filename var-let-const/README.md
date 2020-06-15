@@ -63,3 +63,13 @@ You can't access your variable all over your application, only inside their scop
 */
 
 ```
+
+### 3.Hoisting
+Is the process of initialization at creation of variables with value of _undefined_, default value.
+
+```
+console.log(name_3) //undefined;
+var name_3 = "Jane" ;
+
+
+```
